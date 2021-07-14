@@ -10,13 +10,11 @@ const app = new App({
 });
 
 (async () => {
-  // Start your app
   await app.start(process.env.PORT || 3000);
 
   console.log('⚡️ Bolt app is running!');
 })();
 
-// The open_modal shortcut opens a plain old modal
 app.shortcut('book_leave', async ({ shortcut, ack, client }) => {
   ShortcutController.openModal({ shortcut, ack, client })
 });
